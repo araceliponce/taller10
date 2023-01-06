@@ -1,0 +1,24 @@
+<main class="main">
+
+  <section class="container flex">
+    <input type="text" placeholder="Ingresa nombre tarea" [(ngModel)]="nom" name="suNombre" (input)="updateBtn()" autofocus>
+
+    <textarea name="" placeholder="Ingresa descripción" [(ngModel)]="des" name="suDescripcion"></textarea>
+
+    <input type="button" value="Guardar" (click)="Agregar()" class="btn" [disabled]="isDisabled">
+
+
+  </section>
+
+
+  <section class="container">
+    <p class="listTitle">Lista de tareas</p>
+    <ul class="flex">
+      <li *ngFor="let tarea of tareas,let i=index">
+        <em class="tarea-name">{{tarea.Nombre}}</em>
+        <span class="tarea-desc">: {{tarea.Descripcion}}</span>
+        <button value={{i}} (click)="Eliminar(i)" class="smallBtn">X</button>
+      </li>
+    </ul>
+  </section>
+</main>

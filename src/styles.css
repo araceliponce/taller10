@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 120%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+app-root {
+  min-height: 100vh;
+  display: grid;
+  align-content: space-between;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+app-c3 {
+  max-width: 150vh;
+  display: block;
+
+  padding: 2rem;
+}
+
+app-c1>* {
+  background-color: pink;
+}

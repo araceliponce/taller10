@@ -1,0 +1,10 @@
+footer {
+  background-color: cornflowerblue;
+  padding: .7rem 0;
+}
+
+footer>* {
+  display: block;
+  margin-inline: auto;
+  text-align: center;
+}

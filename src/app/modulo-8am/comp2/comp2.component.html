@@ -1,0 +1,35 @@
+<p>Registro de datos</p>
+<form>
+  <input type="text" placeholder="Nombres" [(ngModel)]="nom" name="unNombre">
+  <input type="text" placeholder="Apellidos" [(ngModel)]="ape" name="unApellido">
+  <input type="button" value="Enviar" (click)="Agregar()">
+</form>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nro</th>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let objeto of datos, let i = index">
+      <!-- tiene que ser 'i = index', no acepta indice o in,, -->
+      <td>{{i+1}}</td>
+      <td>{{objeto.Nombre}}</td>
+      <td>{{objeto.Apellido}}</td>
+      <td>
+        <!-- indice va de 0, 1, 2,3 -->
+        <button value={{i}} (click)="Eliminar(i)">X</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  tr:hover {
+    background-color: lightcoral;
+  }
+</style>
