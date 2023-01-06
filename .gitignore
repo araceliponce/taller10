@@ -6,6 +6,12 @@
 /out-tsc
 /bazel-out
 
+#ng add angular-cli-ghpages
+#ng build
+#ng deploy --base-href "/taller10/"      
+
+#https://blog.bitsrc.io/deploy-your-angular-project-to-github-pages-7cbacb96f35b
+
 # Node
 /node_modules
 npm-debug.log
